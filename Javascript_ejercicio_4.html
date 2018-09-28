@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio #4</title>
+	<script type="text/javascript">
+		function holamundo(){
+			//AUTOR : CARLOS FALLAS G. 27-09-18
+			var meses = new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+			for(mes = 0; mes < 12; mes++){				  
+				if(!confirm("Mes de "+meses[mes]+"\n Desea continuar mostrando los meses?")){
+					mes = 12;
+				}				
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2><a href="#" onclick="holamundo();">De clic aqui!</a> para mostrar los meses</h2>
+</body>
+</html> 

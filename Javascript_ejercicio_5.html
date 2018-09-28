@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio #5</title>
+	<script type="text/javascript">
+		function mensajes(){
+			//AUTOR : CARLOS FALLAS G. 27-09-18
+			var numero1 = 5;
+			var numero2 = 8;
+			if(numero1 < numero2) {
+				alert("numero1 no es mayor que numero2");
+			}
+			if(numero2 > 0 ) {
+				alert("numero2 es positivo");
+			}
+			if( numero1 != 0 ) { //no es necesarioel < 0 ya que siempre que sea != 0 sera positivo o negativo
+				alert("numero1 es negativo o distinto de cero");
+			}
+			if(numero2 > numero1) {
+				alert("Incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2");
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<h2><a href="#" onclick="mensajes();">De clic aqui!</a> para mostrar los mensajes</h2>
+</body>
+</html> 

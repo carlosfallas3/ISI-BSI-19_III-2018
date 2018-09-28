@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio #6</title>
+	<script type="text/javascript">
+		function factorial(){
+			//AUTOR : CARLOS FALLAS G. 27-09-18
+		 	var numero = parseInt(Number(document.getElementById("factorial").value));
+			var acumulado =0;
+			var txt ="";
+			for(var x= numero; x >= 1; x-- ){
+				if(x == numero){
+					acumulado = numero;
+					txt+="!"+x+"="+x;
+				}
+				else{
+					acumulado = (acumulado * x);
+					txt+="*"+x;
+				}
+			
+				if(x == 1){
+					if(numero > 1){
+						txt+= "="+acumulado;
+					}
+					document.getElementById("textArea").value=txt;
+				}
+
+			}	
+				
+			
+		}
+	</script>
+</head>
+<body>
+	<fieldset>
+	<p>Digite un numero entero luego de clic en Imprimir Factorial</p>
+	<input type="number" id="factorial" pattern="^[0-9]+" name="factorial"/>
+	<button onclick="factorial()">Imprimir Factorial</button>
+	</fieldset>
+	<p>Resultado: </p><input type="text" id="textArea"></input>
+</body>
+</html> 

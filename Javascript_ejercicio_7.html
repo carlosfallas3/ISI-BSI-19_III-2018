@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio #7</title>
+	<script type="text/javascript">
+		//AUTOR : CARLOS FALLAS G. 27-09-18
+		function parametroFn(param){
+			if(((param % 2)/2) == 0){
+				console.log("Numero Par!");
+				document.getElementById("cont").append(param+" -> "+"Numero Par! \n");
+			}else{
+				console.log("Numero Impar");
+				document.getElementById("cont").append(param+" -> "+"Numero Impar! \n");
+			}					
+		}
+	</script>
+</head>
+<body>
+	<fieldset>
+	<p>Digite un numero entero luego de clic en Imprimir Factorial, este numero es enviado por parametro al ejecutar el boton</p>
+	<input type="number" id="numero" pattern="^[0-9]+" name="factorial"/>
+	<button onclick="parametroFn(parseInt(Number(document.getElementById('numero').value)))">Imprimir consola</button><br>
+	<textarea id="cont"></textarea>  
+	</fieldset>
+	
+</body>
+</html> 
