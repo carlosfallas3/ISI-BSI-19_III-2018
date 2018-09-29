@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--AUTOR: CARLOS FALLAS GODINEZ 2018
+	-->
+	<title>Ejercicio #8</title>
+	<script type="text/javascript">
+		//AUTOR : CARLOS FALLAS G. 27-09-18
+		function parametroFn(param){
+			if(param === param.toUpperCase()){
+				document.getElementById("cont").append(param+" -> "+"Solo Mayúsculas \n");
+			}else if(param === param.toLowerCase())	{
+				document.getElementById("cont").append(param+" -> "+"Solo Minúsculas \n");
+			}else {
+				document.getElementById("cont").append(param+" -> "+"Minúsculas y Minúsculas \n");			
+			}			
+		}
+	</script>
+</head>
+<body>
+	<fieldset>
+	<p>Digite el texto y de clic en Imprimir, este texto es enviado por parametro al ejecutar el boton</p>
+	<input type="text" id="texto" name="texto"/>
+	<button onclick="parametroFn(document.getElementById('texto').value)">Imprimir</button><br>
+	<textarea id="cont"></textarea>  
+	</fieldset>
+	
+</body>
+</html> 

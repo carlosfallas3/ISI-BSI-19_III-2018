@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio #11</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js
+	"></script>
+	<!--AUTOR: CARLOS FALLAS GODINEZ 2018
+		PRACTICA PHP AJAX IMPLEMENTANDO JQUERY 
+	-->
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Calculadora de dos valores</legend>
+			<div>Primer numero entero :<input type="numero" name="numero1"> </div>
+			<div>Segundo numero entero:<input type="numero" name="numero2"> </div>
+			<div>
+				<button type="button" onclick="Calculadora('sum')" class="">+</button>
+				<button type="button" onclick="Calculadora('res')" class="">-</button>
+				<button type="button" onclick="Calculadora('mul')" class="">*</button>
+				<button type="button" onclick="Calculadora('div')" class="">/</button>
+			</div>
+			<div>Resultado:</div>
+			<div><input type="text" name="resultado"></div>
+		</fieldset>
+	</form>
+	<script type="text/javascript">
+
+		function Calculadora(accion){
+			$.ajax({
+				url: "PHP_ejercicio_11.php",
+				type: 'POST',
+				data: {
+					val1: $("[name=numero1]").val(),
+					val2: $("[name=numero2]").val(),
+					opera: accion
+				},
+				success: function( result ) {
+					$("[name=resultado]").val(result)
+				}
+			});
+		}
+
+	</script>
+</body>
+</html>

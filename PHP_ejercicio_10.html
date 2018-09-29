@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio #10 PHP</title>
+	<!--AUTOR: CARLOS FALLAS GODINEZ 2018
+	-->
+</head>
+<body>
+	<form action="PHP_ejercicio_10.php"  method="post">
+		<fieldset>
+			<legend>Complete los campos</legend>
+		<div>	
+			<label>Campo texto plano:</label>
+		</div>	
+		<div>
+			<input type="text" name="textoPlano">
+		</div>
+		<div>
+			<label>Text Area:</label>
+		</div>	
+		<div>
+			<textarea name="textArea"></textarea>
+		</div>
+		<div>
+			<label>Campo de seleccion:</label>
+		</div>
+		<div>
+			<select name="select">
+				<option value="Unica opcion">Unica opcion</option>
+			</select>
+		</div>
+		<div>	
+		<label>Aprobado<input type="checkbox" name="chekbox" checked="true"></label>
+        </div>
+        <div>
+        <label>Seleccione una opcion:</label>
+    	</div>
+        <div>
+            <input type="radio" id="bueno" name="grupo" value="bueno" checked />
+            <label for="bueno">Bueno</label>
+        </div>
+
+        <div>
+            <input type="radio" id="malo"  name="grupo" value="malo" />
+            <label for="malo">Malo</label>
+        </div>
+        <div>
+    	<label></label>Seleccione un rago:</label>
+    	</div>
+    	<div>
+    	<input type="range" name="rango" min="0" max="100">
+    	</div>
+    	<div>
+    		<input type="submit" value="Enviar al php">
+    	</div>
+    </fieldset>
+	</form>
+</body>
+</html>

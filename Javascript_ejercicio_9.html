@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio #9</title>
+<!--AUTOR: CARLOS FALLAS GODINEZ 2018
+	-->
+	<script type="text/javascript">
+		//AUTOR : CARLOS FALLAS G. 27-09-18
+		function funcionPalindromo(param){
+			var string = param.replace(/ /g ,""); //se remplazan espacios en blanco para comenzar a evaluar
+			string = string.toLowerCase();
+            string = string.replace(new RegExp(/[àáâãäå]/g),"a");
+            string = string.replace(new RegExp(/[èéêë]/g),"e");
+            string = string.replace(new RegExp(/[ìíîï]/g),"i");
+            string = string.replace(new RegExp(/ñ/g),"n");                
+            string = string.replace(new RegExp(/[òóôõö]/g),"o");
+            string = string.replace(new RegExp(/[ùúûü]/g),"u");
+			var palindromo =true;
+			var len = string.length-1;
+			for(var x=0; x < string.length; x++){
+				if(string[x] != string[len]){
+					palindromo =false;
+					x= string.length;
+				}
+				len--;
+			} 
+			if(palindromo){
+				document.getElementById("cont").append(" ->ES PALINDROMO \n");
+			}else{
+				document.getElementById("cont").append(" ->NO ES PALINDROMO \n");
+			}
+		}
+	</script>
+</head>
+<body>
+	<fieldset>
+	<p>Digite el texto y de clic en Imprimir resultado (evalua si es palindromo), este texto es enviado por parametro al ejecutar el boton</p>
+	<input type="text" id="texto" name="texto"/>
+	<button onclick="funcionPalindromo(document.getElementById('texto').value)">Imprimir resultado</button><br>
+	<textarea id="cont"></textarea>  
+	</fieldset>
+	
+</body>
+</html> 
