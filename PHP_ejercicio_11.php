@@ -1,4 +1,5 @@
 <?php 
+ //AUTOR: CARLOS FALLAS GODINEZ
  $accion = $_POST["opera"];
  $val1 = $_POST["val1"];
  $val2 = $_POST["val2"];
@@ -14,5 +15,7 @@
  }
 
  echo $resultado;
+
+ 
 
 ?>
